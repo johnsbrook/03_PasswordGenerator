@@ -7,6 +7,9 @@
 </head>
 <body>
 
+<button onclick="dialog()">Click to Generate Password</button>
+<div><span id="password"></span></div>
+
     <script type="text/javascript">
 
         // These variables will place requests to User
@@ -53,6 +56,9 @@
         
 
         // This section is the conditional statement area
+
+        function dialog() {
+
         if (confirm(passwordRequest)) {       
             if (confirm(lowerCaseRequest)) {
                 if(confirm(upperCaseRequest)) {
@@ -104,15 +110,19 @@
                 } else {alert(output14);}
 
             } else if (confirm(specialRequest)) {
+                document.getElementById("password").innerHTML = "Password";
                 alert(output15);
             } else if(confirm(restartRequest)) {
                     alert(restartOutput);
-                } else {alert(errorRequestOutput)}        
-                    // Return error and will not run the rest of the JS application code
-            
+                    // Returns error and will not run the rest of the JS application code
+                } else {alert(errorRequestOutput)}   
         } else {alert(thankYou);}
-                    
 
+
+
+
+// dialog() function ends here
+}
 
 
 
