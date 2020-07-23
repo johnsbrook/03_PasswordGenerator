@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        // These variables will place requests to User
+        var passwordRequest = "Would you like to generate a secured password?";
+        var lettersRequest = "Would you like your password to have letters?";
+        var numbersRequest = "Would you like your password to have numbers?";
+        var specialRequest = "Would you like your password to have special characters?";
+
+        // These variables are possible password generation options
+        var genericOutput = "Thank you! Let's generate your password with ";
+        var lettersOutput = "letters";
+        var numbersOutput = "numbers";
+        var specialOutput = "special characters";
+        var andString = " and ";
+        var endPeriod = ".";
+        var separatingComma = ", ";
+
+        // These variables are possible dead end outputs to User
+        var errorRequest = "You have not selected any possible options. Refresh page and try again!";
+        var thankYou = "Thank you, see you soon!"; 
+
+
+        // This section is the conditional statement area
+        if (confirm(passwordRequest)) {
+       
+            if (confirm(lettersRequest)) {
+
+                // Number request if true
+                if (confirm(numbersRequest)) {
+
+                    if (confirm(specialRequest)) {
+
+                        // output #1
+                        alert(genericOutput + lettersOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod);
+
+                            // output #2
+                    } else {alert(genericOutput + lettersOutput + andString + numbersOutput + endPeriod);}
+
+                } else if (confirm(specialRequest)) {
+                    
+                    // output #3
+                    alert(genericOutput + lettersOutput + andString + specialOutput + endPeriod);
+
+                            // output #4
+                    } else {alert(genericOutput + lettersOutput + endPeriod);}
+            
+            // Number request if false
+            } else if (confirm(numbersRequest)) {
+
+                if (confirm(specialRequest)) {
+
+                    //output #5
+                    alert(genericOutput + numbersOutput + andString + specialOutput + endPeriod);
+
+                 // output #6
+                } else {alert(genericOutput + numbersOutput + endPeriod);}
+            
+            } else if (confirm(specialRequest)) {
+
+                // output #7
+                alert(genericOutput + specialOutput + endPeriod);
+
+                    // output #8
+            } else {alert(errorRequest);}
+        
+                // output #9
+        } else {alert(thankYou);}
+                    
+
+
+
+    </script>
+
+
+</body>
+</html>
