@@ -13,19 +13,57 @@
         var passwordRequest = "Would you like to generate a secured password?";
         var lettersRequest = "Would you like your password to have letters?";
         var numbersRequest = "Would you like your password to have numbers?";
+        var specialRequest = "Would you like your password to have special characters?";
 
         // These variables are possible password generation options
         var genericOutput = "Thank you! Let's generate your password with ";
         var lettersOutput = "letters";
         var numbersOutput = "numbers";
+        var specialOutput = "special characters";
+        var andString = " and ";
+        var endPeriod = ".";
+        var separatingComma = ", ";
 
         // These variables are possible dead end outputs to User
         var errorRequest = "You have not selected any possible options. Refresh page and try again!";
-        var thankYou = "Thank you and see you soon!"; 
+        var thankYou = "Thank you, see you soon!"; 
 
 
         // This section is the conditional statement area
-        
+        if (confirm(passwordRequest)) {
+       
+            if (confirm(lettersRequest)) {
+
+                if (confirm(numbersRequest)) {
+
+                    if (confirm(specialRequest)) {
+
+                        alert(genericOutput + lettersOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod);
+
+                    } else {alert(genericOutput + lettersOutput + andString + numbersOutput + endPeriod);}
+
+                } else if (confirm(specialRequest)) {
+
+                    alert(genericOutput + lettersOutput + numbersOutput + endPeriod);
+
+                    } else {alert(genericOutput + lettersOutput + endPeriod);}
+                   
+                        
+                    
+
+
+
+
+
+        //         } else alert(genericOutput + lettersOutput + endPeriod);
+
+        //     } else if (confirm(numbersRequest)) { 
+            
+        //         alert(genericOutput + numbersOutput + endPeriod);
+
+        //     } else alert(errorRequest);
+
+        // } else alert(thankYou);
 
 
     </script>
