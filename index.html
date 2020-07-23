@@ -25,7 +25,9 @@
         var separatingComma = ", ";
 
         // These variables are possible dead end outputs to User
-        var errorRequest = "You have not selected any possible options. Refresh page and try again!";
+        var restartRequest = "You have not selected any possible options. Would you like to try again?";
+        var restartOutput = "Let's try again! Please, press F-5 key.";
+        var errorRequestOutput = "You have not selected any possible options and a password has not been generated.";
         var thankYou = "Thank you, see you soon!";
 
 
@@ -50,18 +52,18 @@
                     if (confirm(specialRequest)) {
 
                         // output #1
-                        alert(genericOutput + lettersOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod);
+                        alert(output1);
 
                             // output #2
-                    } else {alert(genericOutput + lettersOutput + andString + numbersOutput + endPeriod);}
+                    } else {alert(output2);}
 
                 } else if (confirm(specialRequest)) {
                     
                     // output #3
-                    alert(genericOutput + lettersOutput + andString + specialOutput + endPeriod);
+                    alert(output3);
 
                             // output #4
-                    } else {alert(genericOutput + lettersOutput + endPeriod);}
+                    } else {alert(output4);}
             
             // Number request if false
             } else if (confirm(numbersRequest)) {
@@ -69,20 +71,24 @@
                 if (confirm(specialRequest)) {
 
                     //output #5
-                    alert(genericOutput + numbersOutput + andString + specialOutput + endPeriod);
+                    alert(output5);
 
                  // output #6
-                } else {alert(genericOutput + numbersOutput + endPeriod);}
+                } else {alert(output6);}
             
             } else if (confirm(specialRequest)) {
 
                 // output #7
-                alert(genericOutput + specialOutput + endPeriod);
+                alert(output7);
 
-                    // output #8
-            } else {alert(errorRequest);}
+                    // Return error with no valid options to generate password
+            } else if(confirm(restartRequest)) {
+
+                alert(restartOutput);
+
+            } else {alert(errorRequestOutput)}
         
-                // output #9
+                // Return error and will not run the rest of the JS application code
         } else {alert(thankYou);}
                     
 
