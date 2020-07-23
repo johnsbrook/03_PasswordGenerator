@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        // These variables will place requests to User
+        var passwordRequest = "Would you like to generate a secured password?";
+        var lowerCaseRequest = "Would you like your password to have lowercase letters?";
+        var upperCaseRequest = "Would you like your password to have uppercase letters";
+        var numbersRequest = "Would you like your password to have numbers?";
+        var specialRequest = "Would you like your password to have special characters?";
+
+        // These variables are possible password generation options
+
+        var genericOutput = "Thank you! Let's generate your password with ";
+        var lowerCaseOutput = "lowercase letters";
+        var upperCaseOutput = "uppercase letters"
+        var numbersOutput = "numbers";
+        var specialOutput = "special characters";
+        var andString = " and ";
+        var endPeriod = ".";
+        var separatingComma = ", ";
+
+        // These variables are possible dead end outputs to User
+        var restartRequest = "You have not selected any possible options. Would you like to try again?";
+        var restartOutput = "Let's try again! Please, click or tab on refresh button or press F-5 key if you're using a desktop or laptop computer.";
+        var errorRequestOutput = "You have not selected any possible options and a password has not been generated.";
+        var thankYou = "Thank you, see you soon!";
+
+
+        // These varible are possible outputs with valid responses to generate password
+        var output1 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
+        var output2 = genericOutput + lowerCaseOutput + andString + numbersOutput + endPeriod;
+        var output3 = genericOutput + lowerCaseOutput + andString + specialOutput + endPeriod;
+        var output4 = genericOutput + lowerCaseOutput + endPeriod;
+        var output5 = genericOutput + numbersOutput + andString + specialOutput + endPeriod;
+        var output6 = genericOutput + numbersOutput + endPeriod;
+        var output7 = genericOutput + specialOutput + endPeriod;
+        
+
+        // This section is the conditional statement area
+        if (confirm(passwordRequest)) {       
+            if (confirm(lowerCaseRequest)) {
+                if(confirm(upperCaseRequest)) {}
+                // Number request if true
+                    if (confirm(numbersRequest)) {
+                        if (confirm(specialRequest)) {
+                            // output #1
+                            alert(output1);
+                                // output #2
+                        } else {alert(output2);}
+                } else if (confirm(specialRequest)) {                    
+                    // output #3
+                    alert(output3);
+                            // output #4
+                } else {alert(output4);}            
+            // Number request if false
+            } else if (confirm(numbersRequest)) {
+                if (confirm(specialRequest)) {
+                    //output #5
+                    alert(output5);
+                 // output #6
+                } else {alert(output6);}            
+            } else if (confirm(specialRequest)) {
+                // output #7
+                alert(output7);
+                    // Return error with no valid options to generate password
+            } else if(confirm(restartRequest)) {
+                alert(restartOutput);
+            } else {alert(errorRequestOutput)}        
+                // Return error and will not run the rest of the JS application code
+        } else {alert(thankYou);}
+                    
+
+
+
+
+    </script>
+
+
+</body>
+</html>
