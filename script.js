@@ -54,6 +54,8 @@ function dialog() {
 
                         if (confirm(specialRequest)) {
 
+                            // This part of the code will happen if user wants to generate a password that contains all elements
+
                             // Builds confirmation string
                             let output1 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
                             // Creates a confirmation alert
@@ -78,7 +80,7 @@ function dialog() {
                                 document.getElementById("password").innerHTML = passwordResult;
 
                            
-                                // output #2
+                        // This part of the code will happen if user wants to generate password that contains all elements, except special characters
                         } else {
                             
                             // Builds confirmation string
@@ -106,7 +108,7 @@ function dialog() {
                         
                         }
 
-
+                    // This part of the code will happen if user wants to generate password that contains all elements, except numbers
                     } else if (confirm(specialRequest)) {      
 
                         // Builds confirmation string    
@@ -121,16 +123,19 @@ function dialog() {
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
 
-
-
-
-
-
-
-
+                        // Loop around medley's set the amount of password's desired length
+                        for (i = 0; i < desiredLength; i++) {
+                    
+                            // Establishes and pushes medley's items into empty array
+                            let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                                medleyItemsArray.push(medleyItems);
+                        
+                        // Generates and prints password into password HTML's index.html <div>
+                        } let passwordResult = medleyItemsArray.join("");
+                            document.getElementById("password").innerHTML = passwordResult;
 
                             // output #4
-                    } else {alert(output4);} 
+                        } else {alert(output4);} 
                 
                     // output12
                     // alert(output12);
