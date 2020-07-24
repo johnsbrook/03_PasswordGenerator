@@ -150,7 +150,7 @@ function dialog() {
 
                             }
                             } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
-                            }
+                        
                             
                         } else {
 
@@ -220,8 +220,6 @@ function dialog() {
                             }
                             } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
                             
-
-
                               
                         } else {
 
@@ -541,14 +539,8 @@ function dialog() {
                     alert(restartOutput);
 
                     // Returns error and will not run the rest of the JS application code
-                } else {alert(errorRequestOutput)}  
+            } else {alert(errorRequestOutput)}  
                 
         // Returns thank you note and invitation for user to visit Password Generator at a later time        
         } else {alert(thankYou);}
-
-
-
-
-
-}
-
+    }
