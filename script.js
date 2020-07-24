@@ -53,7 +53,6 @@ function dialog() {
                     
                     // Tree created if upperCase request is true
                     if (confirm(numbersRequest)) {
-
                         if (confirm(specialRequest)) {
 
                             // This part of the code will happen if user wants to generate a password that contains all elements
@@ -164,15 +163,23 @@ function dialog() {
                 
                 // This tree is created if upperCase request is false
                 } else if (confirm(numbersRequest)) {
-
-
-
-
-
-
                         if (confirm(specialRequest)) {
-                            // output #8
+
+                            // Builds confirmation string   
+                            let output8 = genericOutput + lowerCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
+                            // Creates a confirmation alert
                             alert(output8);
+
+                            // Calls for password's length                      
+                            let desiredLength = prompt("How long would you like the password to be?");        
+                            // Sets of lowerCase letters and upperCase letters (medleyNoNumbersNoSpecialCharacters)
+                            let medley = "abcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+                            // Sets empty medleyItemsArray 
+                            let medleyItemsArray = [];
+
+
+
+
                                 // output #9
                         } else {alert(output9);}
                     } else if (confirm(specialRequest)) {                    
