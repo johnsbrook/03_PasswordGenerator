@@ -49,7 +49,9 @@ function dialog() {
         if (confirm(passwordRequest)) {       
             if (confirm(lowerCaseRequest)) {
                 if(confirm(upperCaseRequest)) {
-                // Number request if true
+
+                    
+                    // Tree created if upperCase request is true
                     if (confirm(numbersRequest)) {
 
                         if (confirm(specialRequest)) {
@@ -135,12 +137,39 @@ function dialog() {
                             document.getElementById("password").innerHTML = passwordResult;
 
                             // output #4
-                        } else {alert(output4);} 
-                
-                    // output12
-                    // alert(output12);
+                        } else {
+                            
+                             // Builds confirmation string    
+                            let output4 = genericOutput + lowerCaseOutput + andString + upperCaseOutput + endPeriod;
+                            // Creates a confirmation alert
+                            alert(output4);} 
 
+                            // Calls for password's length                      
+                            let desiredLength = prompt("How long would you like the password to be?");        
+                            // Sets of lowerCase letters and upperCase letters (medleyNoNumbersNoSpecialCharacters)
+                            let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                            // Sets empty medleyItemsArray 
+                            let medleyItemsArray = [];
+
+                            for (i = 0; i < desiredLength; i++) {
+                    
+                                // Establishes and pushes medley's items into empty array
+                                let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                                    medleyItemsArray.push(medleyItems);
+                            
+                            // Generates and prints password into password HTML's index.html <div>
+                            } let passwordResult = medleyItemsArray.join("");
+                                document.getElementById("password").innerHTML = passwordResult;
+                
+                
+                // This tree is created if upperCase request is false
                 } else if (confirm(numbersRequest)) {
+
+
+
+
+
+
                         if (confirm(specialRequest)) {
                             // output #8
                             alert(output8);
