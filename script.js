@@ -64,7 +64,7 @@ function dialog() {
 
                             // Calls for password's length                      
                             let desiredLength = prompt("How long would you like the password to be?");        
-                            // Sets of lowerCase letters, upperCase letters, numbers and specialCharacters (medley)
+                            // Sets of lowerCase letters, upperCase letters, numbers and specialCharacters 
                             let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                                                                                                         
                             // Sets empty medleyItemsArray 
@@ -125,7 +125,7 @@ function dialog() {
 
                         // Calls for password's length                      
                         let desiredLength = prompt("How long would you like the password to be?");        
-                        // Sets of lowerCase letters, upperCase letters and numbers (medleyNoNumbers)
+                        // Sets of lowerCase letters, upperCase letters and special characters 
                         let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
@@ -154,7 +154,7 @@ function dialog() {
 
                             // Calls for password's length                      
                             let desiredLength = prompt("How long would you like the password to be?");        
-                            // Sets of lowerCase letters and upperCase letters (medleyNoNumbersNoSpecialCharacters)
+                            // Sets of lowerCase letters and upperCase letters 
                             let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
@@ -188,7 +188,7 @@ function dialog() {
 
                             // Calls for password's length                      
                             let desiredLength = prompt("How long would you like the password to be?");        
-                            // Sets of lowerCase letters and upperCase letters (medleyNoNumbersNoSpecialCharacters)
+                            // Sets of lowerCase letters, numbers and special characters 
                             let medley = "abcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
@@ -219,7 +219,7 @@ function dialog() {
 
                             // Calls for password's length                      
                             let desiredLength = prompt("How long would you like the password to be?");        
-                            // Sets of lowerCase letters and upperCase letters (medleyNoNumbersNoSpecialCharacters)
+                            // Sets of lowerCase letters and numbers
                             let medley = "abcdefghijklmnopqrstuvwxyz0123456789";
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
@@ -277,7 +277,7 @@ function dialog() {
                         
                         // Calls for password's length                      
                         let desiredLength = prompt("How long would you like the password to be?");        
-                        // Sets of lowerCase letters and special characters 
+                        // Sets of lowerCase letters
                         let medley = "abcdefghijklmnopqrstuvwxyz";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
@@ -309,7 +309,7 @@ function dialog() {
                         
                         // Calls for password's length                      
                         let desiredLength = prompt("How long would you like the password to be?");        
-                        // Sets of lowerCase letters and special characters 
+                        // Sets of uppercase letters, numbers and special characters 
                         let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
@@ -337,7 +337,7 @@ function dialog() {
                     
                         // Calls for password's length                      
                         let desiredLength = prompt("How long would you like the password to be?");        
-                        // Sets of lowerCase letters and special characters 
+                        // Sets of uppercase letters and numbers 
                         let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
@@ -368,7 +368,7 @@ function dialog() {
                     
                     // Calls for password's length                      
                     let desiredLength = prompt("How long would you like the password to be?");        
-                    // Sets of lowerCase letters and special characters 
+                    // Sets of uppercase letters and special characters 
                     let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                     // Sets empty medleyItemsArray 
                     let medleyItemsArray = [];
@@ -427,7 +427,7 @@ function dialog() {
 
                     // Calls for password's length                      
                     let desiredLength = prompt("How long would you like the password to be?");        
-                    // Sets of uppercase letters
+                    // Sets of numbers and symbols
                     let medley = "0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                     // Sets empty medleyItemsArray 
                     let medleyItemsArray = [];
@@ -456,7 +456,7 @@ function dialog() {
                 
                     // Calls for password's length                      
                     let desiredLength = prompt("How long would you like the password to be?");        
-                    // Sets of uppercase letters
+                    // Sets of numbers
                     let medley = "0123456789";
                     // Sets empty medleyItemsArray 
                     let medleyItemsArray = [];
@@ -486,7 +486,7 @@ function dialog() {
                         
                 // Calls for password's length                      
                 let desiredLength = prompt("How long would you like the password to be?");        
-                // Sets of numbers
+                // Sets of special characters
                 let medley = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                 // Sets empty medleyItemsArray 
                 let medleyItemsArray = [];
@@ -508,12 +508,13 @@ function dialog() {
 
             } else if(confirm(restartRequest)) {
 
+                    //Return option for customer and lets the user know that (s)he may press on Password Generator to try again
                     alert(restartOutput);
 
                     // Returns error and will not run the rest of the JS application code
                 } else {alert(errorRequestOutput)}  
                 
-                
+        // Returns thank you note and invitation for user to visit Password Generator at a later time        
         } else {alert(thankYou);}
 
 
