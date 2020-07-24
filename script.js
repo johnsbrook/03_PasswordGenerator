@@ -63,16 +63,18 @@ function dialog() {
                             // Creates a confirmation alert
                             alert(output1);
 
-                            // Calls for password's length                      
-                            let desiredLength = prompt("How long would you like the password to be?");        
+                            // Calls for password's length                     
+                            let desiredLength = prompt("How long would you like the password to be? Note: The password will generate if it is between 8 and 128 characters long.");        
                             // Sets of lowerCase letters, upperCase letters, numbers and specialCharacters 
                             let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                                                                                                         
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
                         
+                            if (desiredLength > 7 && desiredLength < 129) {
+
                             // Loop around medley's set the amount of password's desired length
-                            for (i = 0; i < desiredLength; i++) {
+                            for (i = 0; i < (desiredLength); i++) {
                         
                                 // Establishes and pushes medley's items into empty array
                                 let medleyItems = medley[Math.floor(Math.random() * medley.length)];
@@ -82,6 +84,7 @@ function dialog() {
                                 let passwordResult = medleyItemsArray.join("");
                                     document.getElementById("password").innerHTML = passwordResult;
                             }
+                            } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
                            
                         
                         } else {
@@ -94,12 +97,13 @@ function dialog() {
                             alert(output2);
                         
                             // Calls for password's length                      
-                            let desiredLength = prompt("How long would you like the password to be?");        
+                            let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                             // Sets of lowerCase letters, upperCase letters and numbers (medleyNoSpecialCharacters)
                             let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
                         
+                            if (desiredLength > 7 && desiredLength < 129) {
                             // Loop around medley's set the amount of password's desired length
                             for (i = 0; i < desiredLength; i++) {
                         
@@ -112,8 +116,9 @@ function dialog() {
                                 document.getElementById("password").innerHTML = passwordResult;
                         
                             }
+                        
+                        } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
                         }
-
                     
                     } else if (confirm(specialRequest)) {      
 
@@ -125,12 +130,13 @@ function dialog() {
                         alert(output3);
 
                         // Calls for password's length                      
-                        let desiredLength = prompt("How long would you like the password to be?");        
+                        let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                         // Sets of lowerCase letters, upperCase letters and special characters 
                         let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
 
+                        if (desiredLength > 7 && desiredLength < 129) {
                         // Loop around medley's set the amount of password's desired length
                         for (i = 0; i < desiredLength; i++) {
                     
@@ -142,7 +148,9 @@ function dialog() {
                             let passwordResult = medleyItemsArray.join("");
                                 document.getElementById("password").innerHTML = passwordResult;
 
-                        }
+                            }
+                            } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
+                            }
                             
                         } else {
 
@@ -154,12 +162,13 @@ function dialog() {
                             alert(output4);
 
                             // Calls for password's length                      
-                            let desiredLength = prompt("How long would you like the password to be?");        
+                            let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                             // Sets of lowerCase letters and upperCase letters 
                             let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
 
+                            if (desiredLength > 7 && desiredLength < 129) {
                              // Loop around medley's set the amount of password's desired length
                             for (i = 0; i < desiredLength; i++) {
                     
@@ -172,6 +181,8 @@ function dialog() {
                                 document.getElementById("password").innerHTML = passwordResult;
                 
                             }
+                            } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
+                            
                         }
                 
                 // This tree is created if upperCase request is false
@@ -188,12 +199,13 @@ function dialog() {
                             alert(output8);
 
                             // Calls for password's length                      
-                            let desiredLength = prompt("How long would you like the password to be?");        
+                            let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                             // Sets of lowerCase letters, numbers and special characters 
                             let medley = "abcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
 
+                            if (desiredLength > 7 && desiredLength < 129) {
                             // Loop around medley's set the amount of password's desired length
                             for (i = 0; i < desiredLength; i++) {
 
@@ -206,6 +218,8 @@ function dialog() {
                                 document.getElementById("password").innerHTML = passwordResult;
                             
                             }
+                            } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
+                            
 
 
                               
@@ -219,12 +233,13 @@ function dialog() {
                             alert(output9);
 
                             // Calls for password's length                      
-                            let desiredLength = prompt("How long would you like the password to be?");        
+                            let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                             // Sets of lowerCase letters and numbers
                             let medley = "abcdefghijklmnopqrstuvwxyz0123456789";
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
 
+                            if (desiredLength > 7 && desiredLength < 129) {
                             // Loop around medley's set the amount of password's desired length
                             for (i = 0; i < desiredLength; i++) {
 
@@ -236,7 +251,10 @@ function dialog() {
                              let passwordResult = medleyItemsArray.join("");
                                 document.getElementById("password").innerHTML = passwordResult;
                             }
+                            } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
                         }
+
+                        
 
                     } else if (confirm(specialRequest)) {                    
                         
@@ -248,13 +266,13 @@ function dialog() {
                         alert(output10);
 
                         // Calls for password's length                      
-                        let desiredLength = prompt("How long would you like the password to be?");        
+                        let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                         // Sets of lowerCase letters and special characters 
                         let medley = "abcdefghijklmnopqrstuvwxyz!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
 
-
+                        if (desiredLength > 7 && desiredLength < 129) {
                         // Loop around medley's set the amount of password's desired length
                         for (i = 0; i < desiredLength; i++) {
 
@@ -265,7 +283,8 @@ function dialog() {
                         // Generates and prints password into password HTML's index.html <div>
                         let passwordResult = medleyItemsArray.join("");
                             document.getElementById("password").innerHTML = passwordResult;
-                        }                      
+                        }  
+                        }else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}                    
                            
                         } else {
                         
@@ -277,13 +296,13 @@ function dialog() {
 
                         
                         // Calls for password's length                      
-                        let desiredLength = prompt("How long would you like the password to be?");        
+                        let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                         // Sets of lowerCase letters
                         let medley = "abcdefghijklmnopqrstuvwxyz";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
 
-
+                        if (desiredLength > 7 && desiredLength < 129) {
                         // Loop around medley's set the amount of password's desired length
                         for (i = 0; i < desiredLength; i++) {
 
@@ -296,7 +315,8 @@ function dialog() {
                             document.getElementById("password").innerHTML = passwordResult;
                         }           
 
-                     }
+                    } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
+                    }
                      
             // Number request if false
             } else if (confirm(upperCaseRequest)) {
@@ -309,13 +329,13 @@ function dialog() {
                         alert(output5);
                         
                         // Calls for password's length                      
-                        let desiredLength = prompt("How long would you like the password to be?");        
+                        let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                         // Sets of uppercase letters, numbers and special characters 
                         let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
 
-
+                        if (desiredLength > 7 && desiredLength < 129) {
                         // Loop around medley's set the amount of password's desired length
                         for (i = 0; i < desiredLength; i++) {
 
@@ -326,7 +346,8 @@ function dialog() {
                         // Generates and prints password into password HTML's index.html <div>
                         let passwordResult = medleyItemsArray.join("");
                             document.getElementById("password").innerHTML = passwordResult;
-                        }             
+                        }   
+                        } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}           
 
 
                     } else {
@@ -337,13 +358,13 @@ function dialog() {
                         alert(output6);
                     
                         // Calls for password's length                      
-                        let desiredLength = prompt("How long would you like the password to be?");        
+                        let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                         // Sets of uppercase letters and numbers 
                         let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
 
-
+                        if (desiredLength > 7 && desiredLength < 129) {
                         // Loop around medley's set the amount of password's desired length
                         for (i = 0; i < desiredLength; i++) {
 
@@ -356,8 +377,8 @@ function dialog() {
                             document.getElementById("password").innerHTML = passwordResult;
                         }           
 
-                    }
-                    
+                    } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
+                    }   
                     
                 } else if (confirm(specialRequest)) {
 
@@ -368,13 +389,13 @@ function dialog() {
 
                     
                     // Calls for password's length                      
-                    let desiredLength = prompt("How long would you like the password to be?");        
+                    let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                     // Sets of uppercase letters and special characters 
                     let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                     // Sets empty medleyItemsArray 
                     let medleyItemsArray = [];
 
-
+                    if (desiredLength > 7 && desiredLength < 129) {
                     // Loop around medley's set the amount of password's desired length
                     for (i = 0; i < desiredLength; i++) {
 
@@ -385,7 +406,8 @@ function dialog() {
                     // Generates and prints password into password HTML's index.html <div>
                     let passwordResult = medleyItemsArray.join("");
                         document.getElementById("password").innerHTML = passwordResult;
-                    }           
+                    } 
+                    } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}          
                   
                 } else {
                     
@@ -397,13 +419,13 @@ function dialog() {
                 
                 
                     // Calls for password's length                      
-                    let desiredLength = prompt("How long would you like the password to be?");        
+                    let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                     // Sets of uppercase letters
                     let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                     // Sets empty medleyItemsArray 
                     let medleyItemsArray = [];
 
-
+                    if (desiredLength > 7 && desiredLength < 129) {
                     // Loop around medley's set the amount of password's desired length
                     for (i = 0; i < desiredLength; i++) {
 
@@ -414,10 +436,12 @@ function dialog() {
                     // Generates and prints password into password HTML's index.html <div>
                     let passwordResult = medleyItemsArray.join("");
                         document.getElementById("password").innerHTML = passwordResult;
-                    }           
+                    }            
                   
+                } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
                 }
-                
+
+
             } else if (confirm(numbersRequest)) {
                 if (confirm(specialRequest)) {
 
@@ -427,13 +451,13 @@ function dialog() {
                     alert(output13);
 
                     // Calls for password's length                      
-                    let desiredLength = prompt("How long would you like the password to be?");        
+                    let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                     // Sets of numbers and symbols
                     let medley = "0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                     // Sets empty medleyItemsArray 
                     let medleyItemsArray = [];
 
-
+                    if (desiredLength > 7 && desiredLength < 129) {
                     // Loop around medley's set the amount of password's desired length
                     for (i = 0; i < desiredLength; i++) {
 
@@ -444,7 +468,8 @@ function dialog() {
                     // Generates and prints password into password HTML's index.html <div>
                     let passwordResult = medleyItemsArray.join("");
                         document.getElementById("password").innerHTML = passwordResult;
-                    }      
+                    } 
+                    } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}     
 
 
                 } else {
@@ -456,13 +481,13 @@ function dialog() {
                 
                 
                     // Calls for password's length                      
-                    let desiredLength = prompt("How long would you like the password to be?");        
+                    let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                     // Sets of numbers
                     let medley = "0123456789";
                     // Sets empty medleyItemsArray 
                     let medleyItemsArray = [];
 
-
+                    if (desiredLength > 7 && desiredLength < 129) {
                     // Loop around medley's set the amount of password's desired length
                     for (i = 0; i < desiredLength; i++) {
 
@@ -475,7 +500,9 @@ function dialog() {
                         document.getElementById("password").innerHTML = passwordResult;
                     }      
                                 
+                } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
                 }
+
 
             } else if (confirm(specialRequest)) {
 
@@ -486,13 +513,13 @@ function dialog() {
 
                         
                 // Calls for password's length                      
-                let desiredLength = prompt("How long would you like the password to be?");        
+                let desiredLength = prompt("Please, enter the length you would like the password to be (between 8 and 128 characters.");        
                 // Sets of special characters
                 let medley = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                 // Sets empty medleyItemsArray 
                 let medleyItemsArray = [];
 
-
+                if (desiredLength > 7 && desiredLength < 129) {
                 // Loop around medley's set the amount of password's desired length
                 for (i = 0; i < desiredLength; i++) {
 
@@ -503,7 +530,8 @@ function dialog() {
                 // Generates and prints password into password HTML's index.html <div>
                 let passwordResult = medleyItemsArray.join("");
                     document.getElementById("password").innerHTML = passwordResult;
-                }      
+                } 
+                } else {alert("Your password is either too short or too long. Remember, the password will only generate if it is between 8 and 128 characters long. Try again!");}
 
 
 
