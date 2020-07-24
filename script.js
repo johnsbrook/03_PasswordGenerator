@@ -44,6 +44,7 @@ var output15 = genericOutput + specialOutput + endPeriod;
 
 // This section is the conditional statement area
 
+
 function dialog() {
 
         if (confirm(passwordRequest)) {       
