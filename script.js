@@ -55,7 +55,7 @@ function dialog() {
                     if (confirm(numbersRequest)) {
                         if (confirm(specialRequest)) {
 
-                            // This part of the code will happen if user wants to generate a password that contains all elements
+                            // This part of the code will run if user wants to generate a password that contains all elements
 
                             // Builds confirmation string
                             let output1 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
@@ -75,15 +75,17 @@ function dialog() {
                                 // Establishes and pushes medley's items into empty array
                                 let medleyItems = medley[Math.floor(Math.random() * medley.length)];
                                     medleyItemsArray.push(medleyItems);
-                            
-                            // Generates and prints password into password HTML's index.html <div>
-                            } let passwordResult = medleyItemsArray.join("");
-                                document.getElementById("password").innerHTML = passwordResult;
-
+                                
+                                // Generates and prints password into password HTML's index.html <div>
+                                let passwordResult = medleyItemsArray.join("");
+                                    document.getElementById("password").innerHTML = passwordResult;
+                            }
                            
-                        // This part of the code will happen if user wants to generate password that contains all elements, except special characters
+                        
                         } else {
-                            
+
+                            // This part of the code will run if user wants to generate password that contains all elements, except special characters
+
                             // Builds confirmation string
                             let output2 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + andString + numbersOutput + endPeriod;
                             // Creates a confirmation alert
@@ -104,13 +106,16 @@ function dialog() {
                                     medleyItemsArray.push(medleyItems);
                             
                             // Generates and prints password into password HTML's index.html <div>
-                            } let passwordResult = medleyItemsArray.join("");
+                            let passwordResult = medleyItemsArray.join("");
                                 document.getElementById("password").innerHTML = passwordResult;
                         
+                            }
                         }
 
-                    // This part of the code will happen if user wants to generate password that contains all elements, except numbers
+                    
                     } else if (confirm(specialRequest)) {      
+
+                        // This part of the code will run if user wants to generate password that contains all elements, except numbers
 
                         // Builds confirmation string    
                         let output3 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + andString + specialOutput + endPeriod;
@@ -131,17 +136,20 @@ function dialog() {
                             let medleyItems = medley[Math.floor(Math.random() * medley.length)];
                                 medleyItemsArray.push(medleyItems);
                         
-                        // Generates and prints password into password HTML's index.html <div>
-                        } let passwordResult = medleyItemsArray.join("");
-                            document.getElementById("password").innerHTML = passwordResult;
+                            // Generates and prints password into password HTML's index.html <div>
+                            let passwordResult = medleyItemsArray.join("");
+                                document.getElementById("password").innerHTML = passwordResult;
 
-                            // output #4
+                        }
+                            
                         } else {
+
+                            // This part of the code will run if user wants to generate password that contains lowercase and uppercase letters
                             
                              // Builds confirmation string    
                             let output4 = genericOutput + lowerCaseOutput + andString + upperCaseOutput + endPeriod;
                             // Creates a confirmation alert
-                            alert(output4);} 
+                            alert(output4);
 
                             // Calls for password's length                      
                             let desiredLength = prompt("How long would you like the password to be?");        
@@ -150,20 +158,27 @@ function dialog() {
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
 
+                             // Loop around medley's set the amount of password's desired length
                             for (i = 0; i < desiredLength; i++) {
                     
-                                // Establishes and pushes medley's items into empty array
-                                let medleyItems = medley[Math.floor(Math.random() * medley.length)];
-                                    medleyItemsArray.push(medleyItems);
+                            // Establishes and pushes medley's items into empty array
+                            let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                                medleyItemsArray.push(medleyItems);
                             
                             // Generates and prints password into password HTML's index.html <div>
-                            } let passwordResult = medleyItemsArray.join("");
+                            let passwordResult = medleyItemsArray.join("");
                                 document.getElementById("password").innerHTML = passwordResult;
                 
+                            }
+                        }
                 
                 // This tree is created if upperCase request is false
                 } else if (confirm(numbersRequest)) {
+
+                        // This will run if number request is true
                         if (confirm(specialRequest)) {
+
+                            // This part of the code will run if user wants to generate password that contains lowercase letters, numbers and special characters
 
                             // Builds confirmation string   
                             let output8 = genericOutput + lowerCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
@@ -177,16 +192,88 @@ function dialog() {
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
 
+                            // Loop around medley's set the amount of password's desired length
+                            for (i = 0; i < desiredLength; i++) {
+
+                            // Establishes and pushes medley's items into empty array
+                            let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                            medleyItemsArray.push(medleyItems);
+                        
+                            // Generates and prints password into password HTML's index.html <div>
+                            let passwordResult = medleyItemsArray.join("");
+                                document.getElementById("password").innerHTML = passwordResult;
+                            
+                            }
 
 
+                              
+                        } else {
 
-                                // output #9
-                        } else {alert(output9);}
+                            // This part of the code will run if user wants to generate password that contains lowercase letters and numbers
+
+                            // Builds confirmation string   
+                            let output9 =  genericOutput + lowerCaseOutput + andString + numbersOutput + endPeriod;
+                            // Creates a confirmation alert
+                            alert(output9);
+
+                            // Calls for password's length                      
+                            let desiredLength = prompt("How long would you like the password to be?");        
+                            // Sets of lowerCase letters and upperCase letters (medleyNoNumbersNoSpecialCharacters)
+                            let medley = "abcdefghijklmnopqrstuvwxyz0123456789";
+                            // Sets empty medleyItemsArray 
+                            let medleyItemsArray = [];
+
+                            // Loop around medley's set the amount of password's desired length
+                            for (i = 0; i < desiredLength; i++) {
+
+                            // Establishes and pushes medley's items into empty array
+                            let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                            medleyItemsArray.push(medleyItems);
+                        
+                            // Generates and prints password into password HTML's index.html <div>
+                             let passwordResult = medleyItemsArray.join("");
+                                document.getElementById("password").innerHTML = passwordResult;
+                            }
+                        }
+
                     } else if (confirm(specialRequest)) {                    
-                        // output #10
+                        
+                        // This part of the code will run if user wants to generate password that contains lowercase letters and special characters
+
+                        // Builds confirmation string   
+                        let output10 = genericOutput + lowerCaseOutput + andString + specialOutput + endPeriod;
+                        // Creates a confirmation alert
                         alert(output10);
-                            // output #11
-                    } else {alert(output11);}
+
+                        // Calls for password's length                      
+                        let desiredLength = prompt("How long would you like the password to be?");        
+                        // Sets of lowerCase letters and special characters 
+                        let medley = "abcdefghijklmnopqrstuvwxyz!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+                        // Sets empty medleyItemsArray 
+                        let medleyItemsArray = [];
+
+                        // Establishes and pushes medley's items into empty array
+                        let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                        medleyItemsArray.push(medleyItems);
+                    
+                        // Generates and prints password into password HTML's index.html <div>
+                        let passwordResult = medleyItemsArray.join("");
+                            document.getElementById("password").innerHTML = passwordResult;
+                                                
+                           
+                        } else {
+                        
+                        
+                        // Builds confirmation string 
+                        let output11 = genericOutput + lowerCaseOutput + endPeriod;
+                        // Creates a confirmation alert
+                        alert(output11);
+                    
+                    
+                    
+                    
+                    
+                    }
                      
             // Number request if false
             } else if (confirm(upperCaseRequest)) {
@@ -219,6 +306,6 @@ function dialog() {
 
 
 
-// dialog() function ends here
+
 }
 
