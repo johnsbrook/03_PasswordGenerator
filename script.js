@@ -66,11 +66,14 @@ function dialog() {
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
                         
+                            // Loop around medley's set the amount of password's desired length
                             for (i = 0; i < desiredLength; i++) {
                         
+                                // Establishes and pushes medley's items into empty array
                                 let medleyItems = medley[Math.floor(Math.random() * medley.length)];
                                     medleyItemsArray.push(medleyItems);
-                                    
+                            
+                            // Generates and prints password into password HTML's index.html <div>
                             } let passwordResult = medleyItemsArray.join("");
                                 document.getElementById("password").innerHTML = passwordResult;
 
@@ -90,11 +93,14 @@ function dialog() {
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
                         
+                            // Loop around medley's set the amount of password's desired length
                             for (i = 0; i < desiredLength; i++) {
                         
+                                // Establishes and pushes medley's items into empty array
                                 let medleyItems = medley[Math.floor(Math.random() * medley.length)];
                                     medleyItemsArray.push(medleyItems);
-                                    
+                            
+                            // Generates and prints password into password HTML's index.html <div>
                             } let passwordResult = medleyItemsArray.join("");
                                 document.getElementById("password").innerHTML = passwordResult;
                         
@@ -110,7 +116,7 @@ function dialog() {
 
                         // Calls for password's length                      
                         let desiredLength = prompt("How long would you like the password to be?");        
-                        // Sets of lowerCase letters, upperCase letters and numbers (medleyNoSpecialCharacters)
+                        // Sets of lowerCase letters, upperCase letters and numbers (medleyNoNumbers)
                         let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[]^_`{|}~";
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
