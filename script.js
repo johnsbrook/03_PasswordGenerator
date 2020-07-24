@@ -19,7 +19,7 @@ var separatingComma = ", ";
 
 // These variables are possible dead end outputs to User
 var restartRequest = "You have not selected any possible options. Would you like to try again?";
-var restartOutput = "Let's try again! Please, click or tab on refresh button or press F-5 key if you're using a desktop or laptop computer.";
+var restartOutput = "Let's try again! Please, click or tab on \"Generate Password\" button";
 var errorRequestOutput = "You have not selected any possible options and a password has not been generated.";
 var thankYou = "Thank you, see you soon!";
 
@@ -66,6 +66,7 @@ function dialog() {
                             let desiredLength = prompt("How long would you like the password to be?");        
                             // Sets of lowerCase letters, upperCase letters, numbers and specialCharacters (medley)
                             let medley = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+                                                                                                        
                             // Sets empty medleyItemsArray 
                             let medleyItemsArray = [];
                         
@@ -252,6 +253,10 @@ function dialog() {
                         // Sets empty medleyItemsArray 
                         let medleyItemsArray = [];
 
+
+                        // Loop around medley's set the amount of password's desired length
+                        for (i = 0; i < desiredLength; i++) {
+
                         // Establishes and pushes medley's items into empty array
                         let medleyItems = medley[Math.floor(Math.random() * medley.length)];
                         medleyItemsArray.push(medleyItems);
@@ -259,7 +264,7 @@ function dialog() {
                         // Generates and prints password into password HTML's index.html <div>
                         let passwordResult = medleyItemsArray.join("");
                             document.getElementById("password").innerHTML = passwordResult;
-                                                
+                        }                      
                            
                         } else {
                         
@@ -268,39 +273,247 @@ function dialog() {
                         let output11 = genericOutput + lowerCaseOutput + endPeriod;
                         // Creates a confirmation alert
                         alert(output11);
+
+                        
+                        // Calls for password's length                      
+                        let desiredLength = prompt("How long would you like the password to be?");        
+                        // Sets of lowerCase letters and special characters 
+                        let medley = "abcdefghijklmnopqrstuvwxyz";
+                        // Sets empty medleyItemsArray 
+                        let medleyItemsArray = [];
+
+
+                        // Loop around medley's set the amount of password's desired length
+                        for (i = 0; i < desiredLength; i++) {
+
+                        // Establishes and pushes medley's items into empty array
+                        let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                        medleyItemsArray.push(medleyItems);
                     
-                    
-                    
-                    
-                    
-                    }
+                        // Generates and prints password into password HTML's index.html <div>
+                        let passwordResult = medleyItemsArray.join("");
+                            document.getElementById("password").innerHTML = passwordResult;
+                        }           
+
+                     }
                      
             // Number request if false
             } else if (confirm(upperCaseRequest)) {
                 if (confirm(numbersRequest)) {
                     if (confirm(specialRequest)) {
-                        //output #5
+
+                        // Builds confirmation string 
+                        let output5 = genericOutput + upperCaseOutput + separatingComma  + numbersOutput + andString + specialOutput + endPeriod;
+                        // Creates a confirmation alert
                         alert(output5);
-                    // output #6
-                    } else {alert(output6);}            
+                        
+                        // Calls for password's length                      
+                        let desiredLength = prompt("How long would you like the password to be?");        
+                        // Sets of lowerCase letters and special characters 
+                        let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+                        // Sets empty medleyItemsArray 
+                        let medleyItemsArray = [];
+
+
+                        // Loop around medley's set the amount of password's desired length
+                        for (i = 0; i < desiredLength; i++) {
+
+                        // Establishes and pushes medley's items into empty array
+                        let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                        medleyItemsArray.push(medleyItems);
+                    
+                        // Generates and prints password into password HTML's index.html <div>
+                        let passwordResult = medleyItemsArray.join("");
+                            document.getElementById("password").innerHTML = passwordResult;
+                        }             
+
+
+                    } else {
+                        
+                        // Builds confirmation string 
+                        let output6 = genericOutput + numbersOutput + andString + upperCaseOutput + endPeriod;
+                        // Creates a confirmation alert
+                        alert(output6);
+                    
+                        // Calls for password's length                      
+                        let desiredLength = prompt("How long would you like the password to be?");        
+                        // Sets of lowerCase letters and special characters 
+                        let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                        // Sets empty medleyItemsArray 
+                        let medleyItemsArray = [];
+
+
+                        // Loop around medley's set the amount of password's desired length
+                        for (i = 0; i < desiredLength; i++) {
+
+                        // Establishes and pushes medley's items into empty array
+                        let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                        medleyItemsArray.push(medleyItems);
+                    
+                        // Generates and prints password into password HTML's index.html <div>
+                        let passwordResult = medleyItemsArray.join("");
+                            document.getElementById("password").innerHTML = passwordResult;
+                        }           
+
+                    }
+                    
+                    
                 } else if (confirm(specialRequest)) {
-                    // output #7
+
+                    // Builds confirmation string 
+                    let output7 = genericOutput + upperCaseOutput + andString + specialOutput + endPeriod;
+                    // Creates a confirmation alert
                     alert(output7);
-                        // Return error with no valid options to generate password
-                } else {alert(output12);}
+
+                    
+                    // Calls for password's length                      
+                    let desiredLength = prompt("How long would you like the password to be?");        
+                    // Sets of lowerCase letters and special characters 
+                    let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+                    // Sets empty medleyItemsArray 
+                    let medleyItemsArray = [];
+
+
+                    // Loop around medley's set the amount of password's desired length
+                    for (i = 0; i < desiredLength; i++) {
+
+                    // Establishes and pushes medley's items into empty array
+                    let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                    medleyItemsArray.push(medleyItems);
+                
+                    // Generates and prints password into password HTML's index.html <div>
+                    let passwordResult = medleyItemsArray.join("");
+                        document.getElementById("password").innerHTML = passwordResult;
+                    }           
+                  
+                } else {
+                    
+
+                    // Builds confirmation string 
+                    let output12 = genericOutput + upperCaseOutput + endPeriod
+                    // Creates a confirmation alert                    
+                    alert(output12);
+                
+                
+                    // Calls for password's length                      
+                    let desiredLength = prompt("How long would you like the password to be?");        
+                    // Sets of uppercase letters
+                    let medley = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    // Sets empty medleyItemsArray 
+                    let medleyItemsArray = [];
+
+
+                    // Loop around medley's set the amount of password's desired length
+                    for (i = 0; i < desiredLength; i++) {
+
+                    // Establishes and pushes medley's items into empty array
+                    let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                    medleyItemsArray.push(medleyItems);
+                
+                    // Generates and prints password into password HTML's index.html <div>
+                    let passwordResult = medleyItemsArray.join("");
+                        document.getElementById("password").innerHTML = passwordResult;
+                    }           
+                  
+                }
                 
             } else if (confirm(numbersRequest)) {
                 if (confirm(specialRequest)) {
+
+                    // Builds confirmation string 
+                    let output13 = genericOutput + numbersOutput + andString + specialOutput + endPeriod;
+                    // Creates a confirmation alert  
                     alert(output13);
-                } else {alert(output14);}
+
+                    // Calls for password's length                      
+                    let desiredLength = prompt("How long would you like the password to be?");        
+                    // Sets of uppercase letters
+                    let medley = "0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+                    // Sets empty medleyItemsArray 
+                    let medleyItemsArray = [];
+
+
+                    // Loop around medley's set the amount of password's desired length
+                    for (i = 0; i < desiredLength; i++) {
+
+                    // Establishes and pushes medley's items into empty array
+                    let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                    medleyItemsArray.push(medleyItems);
+
+                    // Generates and prints password into password HTML's index.html <div>
+                    let passwordResult = medleyItemsArray.join("");
+                        document.getElementById("password").innerHTML = passwordResult;
+                    }      
+
+
+                } else {
+                    
+                    // Builds confirmation string 
+                    let output14 = genericOutput + numbersOutput + endPeriod;
+                    // Creates a confirmation alert                      
+                    alert(output14);
+                
+                
+                    // Calls for password's length                      
+                    let desiredLength = prompt("How long would you like the password to be?");        
+                    // Sets of uppercase letters
+                    let medley = "0123456789";
+                    // Sets empty medleyItemsArray 
+                    let medleyItemsArray = [];
+
+
+                    // Loop around medley's set the amount of password's desired length
+                    for (i = 0; i < desiredLength; i++) {
+
+                    // Establishes and pushes medley's items into empty array
+                    let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                    medleyItemsArray.push(medleyItems);
+
+                    // Generates and prints password into password HTML's index.html <div>
+                    let passwordResult = medleyItemsArray.join("");
+                        document.getElementById("password").innerHTML = passwordResult;
+                    }      
+                                
+                }
 
             } else if (confirm(specialRequest)) {
-                document.getElementById("password").innerHTML = "Password";
+
+                // Builds confirmation string 
+                var output15 = genericOutput + specialOutput + endPeriod;
+                // Creates a confirmation alert     
                 alert(output15);
+
+                        
+                // Calls for password's length                      
+                let desiredLength = prompt("How long would you like the password to be?");        
+                // Sets of numbers
+                let medley = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+                // Sets empty medleyItemsArray 
+                let medleyItemsArray = [];
+
+
+                // Loop around medley's set the amount of password's desired length
+                for (i = 0; i < desiredLength; i++) {
+
+                // Establishes and pushes medley's items into empty array
+                let medleyItems = medley[Math.floor(Math.random() * medley.length)];
+                medleyItemsArray.push(medleyItems);
+
+                // Generates and prints password into password HTML's index.html <div>
+                let passwordResult = medleyItemsArray.join("");
+                    document.getElementById("password").innerHTML = passwordResult;
+                }      
+
+
+
             } else if(confirm(restartRequest)) {
+
                     alert(restartOutput);
+
                     // Returns error and will not run the rest of the JS application code
-                } else {alert(errorRequestOutput)}   
+                } else {alert(errorRequestOutput)}  
+                
+                
         } else {alert(thankYou);}
 
 
