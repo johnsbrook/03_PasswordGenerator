@@ -35,3 +35,6 @@ To begin using the password generator, follow these steps:
 * Later, confirm if the password should have numbers
 * Finally, verify if the special characters sould be included in the password that will be generated. 
 
+The password will be printed inside the box with a «Your Secured Password» placeholder. 
+
+CONGRATULATIONS! You've succesfully used the Password Generator. 
