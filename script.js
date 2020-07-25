@@ -25,21 +25,21 @@ var thankYou = "Thank you, see you soon!";
 
 
 // These varible are possible outputs with valid responses to generate password
-var output1 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
-var output2 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + andString + numbersOutput + endPeriod;
-var output3 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + andString + specialOutput + endPeriod;
-var output4 = genericOutput + lowerCaseOutput + andString + upperCaseOutput + endPeriod;
-var output5 = genericOutput + upperCaseOutput + separatingComma  + numbersOutput + andString + specialOutput + endPeriod;
-var output6 = genericOutput + numbersOutput + andString + upperCaseOutput + endPeriod;
-var output7 = genericOutput + upperCaseOutput + andString + specialOutput + endPeriod;
-var output8 = genericOutput + lowerCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
-var output9 = genericOutput + lowerCaseOutput + andString + numbersOutput + endPeriod;
-var output10 = genericOutput + lowerCaseOutput + andString + specialOutput + endPeriod;
-var output11 = genericOutput + lowerCaseOutput + endPeriod;
-var output12 = genericOutput + upperCaseOutput + endPeriod;
-var output13 = genericOutput + numbersOutput + andString + specialOutput + endPeriod;
-var output14 = genericOutput + numbersOutput + endPeriod;
-var output15 = genericOutput + specialOutput + endPeriod; 
+// var output1 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
+// var output2 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + andString + numbersOutput + endPeriod;
+// var output3 = genericOutput + lowerCaseOutput + separatingComma + upperCaseOutput + andString + specialOutput + endPeriod;
+// var output4 = genericOutput + lowerCaseOutput + andString + upperCaseOutput + endPeriod;
+// var output5 = genericOutput + upperCaseOutput + separatingComma  + numbersOutput + andString + specialOutput + endPeriod;
+// var output6 = genericOutput + numbersOutput + andString + upperCaseOutput + endPeriod;
+// var output7 = genericOutput + upperCaseOutput + andString + specialOutput + endPeriod;
+// var output8 = genericOutput + lowerCaseOutput + separatingComma + numbersOutput + andString + specialOutput + endPeriod;
+// var output9 = genericOutput + lowerCaseOutput + andString + numbersOutput + endPeriod;
+// var output10 = genericOutput + lowerCaseOutput + andString + specialOutput + endPeriod;
+// var output11 = genericOutput + lowerCaseOutput + endPeriod;
+// var output12 = genericOutput + upperCaseOutput + endPeriod;
+// var output13 = genericOutput + numbersOutput + andString + specialOutput + endPeriod;
+// var output14 = genericOutput + numbersOutput + endPeriod;
+// var output15 = genericOutput + specialOutput + endPeriod; 
 
 
 // This section is the conditional statement area
