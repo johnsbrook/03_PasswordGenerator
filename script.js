@@ -127,7 +127,7 @@ function trueOrFalse() {
 }
 
 
-// Creates an array to store password values, establishes items and pushes thems inside the array; generates and prints password into ID
+// Creates an array to store password values, establishes items and pushes them inside the array; generates and prints password into ID
 function medleyFunction() {
 
     var medleyItemsArray = [];
