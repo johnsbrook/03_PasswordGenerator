@@ -4,10 +4,9 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specialCharacters = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
 
+// Global variables to store value from inside functions
 var medley;
 var desiredLength;
-
-
 
 //This block creates alert and prompt variables with function alerts()
 var lengthRequest = "How long would you like the password to be? Please, choose a value between 8 and 128 characters.";
@@ -16,18 +15,6 @@ var upperCaseRequest = "Would you like your password to have uppercase letters";
 var numbersRequest = "Would you like your password to have numbers?";
 var specialRequest = "Would you like your password to have special characters?";
 var lengthError = "Password either too short or too long. Please, try again!"
-
-
-//Create alert text variables
-var genericOutput = "Thank you! Let's generate your password with ";
-var lowerCaseOutput = "lowercase letters";
-var upperCaseOutput = "uppercase letters"
-var numbersOutput = "numbers";
-var specialOutput = "special characters";
-var andString = " and ";
-var endPeriod = ".";
-var separatingComma = ", ";
-
 
 
 // Create event listener for when the user clicks on button "Generate Password" and calls function lengthTrue()
