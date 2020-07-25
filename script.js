@@ -10,7 +10,7 @@ var desiredLength;
 
 
 //This block creates alert and prompt variables with function alerts()
-var lengthRequest = "How long would you like the password to be?";
+var lengthRequest = "How long would you like the password to be? Please, choose a value between 8 and 128 characters.";
 var lowerCaseRequest = "Would you like your password to have lowercase letters?";
 var upperCaseRequest = "Would you like your password to have uppercase letters";
 var numbersRequest = "Would you like your password to have numbers?";
